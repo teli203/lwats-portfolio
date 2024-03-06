@@ -3,7 +3,7 @@
     /* Colors */
     --bg: rgba(236, 236, 224, 0.744);
     --bg-alt: #333;
-    --bg-alt-2: #f0f0f0;
+    --bg-alt-2: #a6a5a5e8;
     --bg-transparent: #ffffffe8;
     --border: 0.01rem solid #333;
     --text: #333;
@@ -42,7 +42,7 @@
     :root.dark-mode {
     --bg: rgba(50, 47, 47, 0.945);
     --bg-alt: #3c3d40;
-    --bg-alt-2: #333;
+    --bg-alt-2: #959494;
     --bg-transparent: #333333f5;
     --border: 0.01rem solid #5a5a5a;
     --text: #f0f0f0;
@@ -76,8 +76,8 @@
 
 /* Color Mode Toggle BTN */
 #color-mode {
-    /* background: var(--bg-alt-2);*/
-    background: rgb(127, 1, 1);
+    background: var(--bg-alt-2);
+    border: 2px solid rgb(127, 1, 1); 
     height: 2.75rem;
     width: 4rem;
     border-radius: 3rem;
