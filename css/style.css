@@ -16,3 +16,17 @@ h1, h2, h5, p{
 /* Removing all of the margin aka space outside the element 4 above h1-h5 */
     margin: 0; 
 }
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+    margin: 0 0.5;
+}
+
+#hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* moves #hero to the center */
+    text-align: center;
+}
