@@ -4,4 +4,15 @@
 /* General */
 body {
     font-family: "Rajhani", sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h5, p{
+/* Removing all of the margin aka space outside the element 4 above h1-h5 */
+    margin: 0; 
 }
