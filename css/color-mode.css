@@ -2,4 +2,8 @@
 :root {
     /* Colors */
     --bg: rgba(236, 236, 224, 0.744);
+
+    /* Face Animation */
+    --tl-1: url(../assets/face-animation-light/tl-1.png);
 }
+
