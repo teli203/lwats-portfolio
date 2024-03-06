@@ -2,6 +2,12 @@
 :root {
     /* Colors */
     --bg: rgba(236, 236, 224, 0.744);
+    --bg-alt: #333;
+    --bg-alt-2: #f0f0f0;
+    --bg-transparent: #ffffffe8;
+    --border: 0.01rem solid #333;
+    --text: #333;
+    --text-alt: rgba(236, 236, 224, 0.744);
 
     /* Face Animation */
     --tl-1: url(../assets/face-animation-light/tl-1.png);
