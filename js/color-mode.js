@@ -1,0 +1,32 @@
+// Define DOM Elements //
+const toggleButton = document.querySelector("#toggle-button");
+const root = document.querySelector(":root");
+const storageKey = "color-mode";  // default settings 4 pg refresh will remember the
+const defaultMode = "light-mode"; // mode that it was last on b4 the pg refresh. //
+
+// Load the users preffered color mode from local storage. //
+function loadColorMode() {
+
+}
+
+loadColorMode();
+
+// Toggle the color mode //
+toggleButton.addEventListener("click", () => {
+
+});
+
+// Save the users preferred color mode to local storage //
+function saveColorMode() {
+    // Check to see if the root element has a class of "dark-mode". If yes, then the current mode is switched to light, and vice versa.//
+    const currentMode = root.classList.contains("dark-mode") ? "light-mode": "dark-mode";
+    root.classList.remove("light-mode", "dark-mode");
+    root.classList.add("currentMode");
+    localStorage.setItem(storageKey, currentMode);
+    updateToggleButton();
+}
+
+function updateToggleButton() {
+    
+}
+
