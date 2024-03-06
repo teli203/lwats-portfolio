@@ -1,0 +1,15 @@
+/* Hover Animation */
+@keyframes hover {
+    0% {
+        /* write 1st code direction @ 0% */
+        transform: translateY(0);
+    }
+    50% {
+        /* write 2nd code direction @ 50% */
+        transform: translateY(-5px);
+    }
+    100% {
+        /* write 3rd code direction @ 100% */
+        transform: translateY(0);
+    }
+}
