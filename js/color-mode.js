@@ -6,14 +6,16 @@ const defaultMode = "light-mode"; // mode that it was last on b4 the pg refresh.
 
 // Load the users preffered color mode from local storage. //
 function loadColorMode() {
-
+    const colorMode = localStorage.getItem(storageKey);
+    root.classList.add(colorMode || defaultMode);
+    updateToggleButton();
 }
 
 loadColorMode();
 
 // Toggle the color mode //
 toggleButton.addEventListener("click", () => {
-
+    saveColorMode();
 });
 
 // Save the users preferred color mode to local storage //
@@ -27,6 +29,10 @@ function saveColorMode() {
 }
 
 function updateToggleButton() {
-    
+    if (root.classList.contains("dark-mode")){
+        toggleButton.style.backgroundImage = "var(--moon)";
+    } else {
+        toggleButton.style.backgroundImage = "var(--sun)";
+    }
 }
 
