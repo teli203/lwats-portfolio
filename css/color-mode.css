@@ -99,7 +99,7 @@
 .dark-mode #toggle-button {
     background-image: var(--moon);
 }
-.dark-mode #toggle-button {
+.dark-mode #color-mode {
     justify-content: flex-end;
 }
 
