@@ -78,12 +78,31 @@ h1, h2, h5, p{
     font-size: 1.5rem;
     z-index: 100;
     border-radius: 40%;
-    transition: transform 0.2 ease-in-out; /* comes into play w/hover effect */
+    transition: transform 0.2s ease-in-out; /* comes into play w/hover effect */
 }
 
 #grid__tl__content,
 #grid__tr__content,
 #grid__bl__content,
 #grid__br__content {
-    
+    position: absolute;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    color: var(--text-alt); /* text in abt section disappears b/c of bkgrd color */
+}
+
+#grid__tl__btn,
+#grid__tr__btn {
+    padding-bottom: 0.5rem;
+    align-items: flex-end; /* putting title `about` at the edge so when rotate 45 drg is shows */  
+}
+
+#grid__bl__btn,
+#grid__br__btn {
+    padding-bottom: 0.5rem;
+}
+
+#grid__tl__btn:active,
+#grid__br__btn:active {
+    transform: rotate(-45deg) scale(1.05); /*rotate for the position set */
 }
