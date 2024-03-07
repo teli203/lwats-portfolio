@@ -107,22 +107,22 @@ trBtn.onclick = function () {
         playAnimation("animate-top-right", "reverse-animate-top-right");
 
         // Change Background Colors //
-        trBtn.style.background = bgColor;
+        trBtn.style.background = bgColorAlt;
         brBtn.style.background = bgColor;
         blBtn.style.background = bgColor;
-        tlBtn.style.background = bgColorAlt;
+        tlBtn.style.background = bgColor;
 
         // Change Text Colors //
-        trBtn.style.color = textColor;
+        trBtn.style.color = textColorAlt;
         brBtn.style.color = textColor;
         blBtn.style.color = textColor;
-        tlBtn.style.color = textColorAlt;
+        tlBtn.style.color = textColor;
 
         // Change of the Corners Content //
-        trContent.style.transform = trHidden;
+        trContent.style.transform = trActive;
         brContent.style.transform = brHidden;
         blContent.style.transform = blHidden;
-        tlContent.style.transform = tlActive;
+        tlContent.style.transform = tlHidden;
     }
 };
 
@@ -141,20 +141,20 @@ blBtn.onclick = function () {
         // Change Background Colors //
         trBtn.style.background = bgColor;
         brBtn.style.background = bgColor;
-        blBtn.style.background = bgColor;
-        tlBtn.style.background = bgColorAlt;
+        blBtn.style.background = bgColorAlt;
+        tlBtn.style.background = bgColor;
 
         // Change Text Colors //
         trBtn.style.color = textColor;
         brBtn.style.color = textColor;
-        blBtn.style.color = textColor;
-        tlBtn.style.color = textColorAlt;
+        blBtn.style.color = textAlt;
+        tlBtn.style.color = textColor;
 
         // Change of the Corners Content //
         trContent.style.transform = trHidden;
         brContent.style.transform = brHidden;
-        blContent.style.transform = blHidden;
-        tlContent.style.transform = tlActive;
+        blContent.style.transform = blActive;
+        tlContent.style.transform = tlHidden;
     }
 };
 
@@ -172,20 +172,20 @@ brBtn.onclick = function () {
 
         // Change Background Colors //
         trBtn.style.background = bgColor;
-        brBtn.style.background = bgColor;
+        brBtn.style.background = bgAlt;
         blBtn.style.background = bgColor;
-        tlBtn.style.background = bgColorAlt;
+        tlBtn.style.background = bgColor;
 
         // Change Text Colors //
         trBtn.style.color = textColor;
-        brBtn.style.color = textColor;
+        brBtn.style.color = textAlt;
         blBtn.style.color = textColor;
-        tlBtn.style.color = textColorAlt;
+        tlBtn.style.color = textColor;
 
         // Change of the Corners Content //
         trContent.style.transform = trHidden;
-        brContent.style.transform = brHidden;
+        brContent.style.transform = brActive;
         blContent.style.transform = blHidden;
-        tlContent.style.transform = tlActive;
+        tlContent.style.transform = tlHidden;
     }
 };
