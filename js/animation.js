@@ -67,6 +67,10 @@ tlBtn.onclick = function () {
     if (activeCorner === "top-left") {
         playClosingAnimation(reverse-animate-top-left);
     } else {
+        trActive.innerHTML = "Triumph";
+        blActive.innerHTML = "Settle";
+        brActive.innerHTML = "Defeat";
+
         // Set active corner //
         activeCorner = "top-left";
         tlBtn.innerHTML = "&uarr;<br />About";
@@ -99,6 +103,10 @@ trBtn.onclick = function () {
     if (activeCorner === "top-right") {
         playClosingAnimation(reverse-animate-top-right);
     } else {
+        tlActive.innerHTML = "About";
+        blActive.innerHTML = "Settle";
+        brActive.innerHTML = "Defeat";
+
         // Set active corner //
         activeCorner = "top-right";
         tlBtn.innerHTML = "&uarr;<br />Triumph";
@@ -131,6 +139,10 @@ blBtn.onclick = function () {
     if (activeCorner === "bottom-left") {
         playClosingAnimation(reverse-animate-bottom-left);
     } else {
+        tlActive.innerHTML = "About";
+        trActive.innerHTML = "Triumph";
+        brActive.innerHTML = "Defeat";
+
         // Set active corner //
         activeCorner = "bottom-left";
         tlBtn.innerHTML = "&uarr;<br />Settle";
@@ -163,6 +175,10 @@ brBtn.onclick = function () {
     if (activeCorner === "bottom-right") {
         playClosingAnimation(reverse-animate-bottom-right);
     } else {
+        tlActive.innerHTML = "About";
+        blActive.innerHTML = "Settle";
+        trActive.innerHTML = "Triumph";
+
         // Set active corner //
         activeCorner = "bottom-right";
         tlBtn.innerHTML = "&uarr;<br />Defeat";
