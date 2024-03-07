@@ -43,9 +43,47 @@ h1, h2, h5, p{
 }
 
 #hero__animation__img {
-    /* tl-1 (top left 1) head animation looks to top left when that 'about' section is clicked */
+ /* tl-1 (top left 1) head animation looks to top left when that 'about' section is clicked */
     background-image: var(--tl-1);
     height: 100%;
     background-position: center;
     background-size: cover;
+}
+
+/* Grid Common Styles */
+#grid {
+    position: absolute;
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+#grid__tl__btn,
+#grid__tr__btn,
+#grid__bl__btn,
+#grid__br__btn{
+    height: 18.75rem;
+    width: 18.75rem;
+    background: var(--bg);
+    color: var(--text);
+    border: var(--border);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    z-index: 100;
+    border-radius: 40%;
+    transition: transform 0.2 ease-in-out; /* comes into play w/hover effect */
+}
+
+#grid__tl__content,
+#grid__tr__content,
+#grid__bl__content,
+#grid__br__content {
+    
 }
