@@ -54,7 +54,18 @@ let lastReverseAnimation = "";
 
 // Play animation //
 function playAnimation(animation, reverseAnimation) {
-    
+  if (lastReverseAnimation !== "") {
+    // Btn Clicked! reverse code goes here //
+   heroImage.classList.add(lastReverseAnimation);
+   setTimeout(function () {
+    heroImage.classList.remove(lastReverseAnimation);
+    heroImage.classList.add(animation);
+    lastReverseAnimation = reverseAnimation;
+   }, 200);
+  } else {
+    heroImage.classList.add(animation);
+    lastReverseAnimation = reverseAnimation;
+  }  
 }
 
 function playClosingAnimation(reverseAnimation) {
