@@ -41,5 +41,14 @@ let brHidden = "translateX(100vw) translateY(100vh)";
 // Define Corners that are Open //
 let activeCorner ="";
 
-//Add an EventListener to the window object to listen for resize event (click) //
+//Add an EventListener to the window object to listen for resize event (listen,click,etc) //
+window.addEventListener("resize",handleWindowResize);
+
+// Function that handles the styling when resizing window //
+function handleWindowResize(){
+    // write function //
+}
+
+// Store the last reverse animation, ready to be played //
+let lastReverseAnimation = "";
 
