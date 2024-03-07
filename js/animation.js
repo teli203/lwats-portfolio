@@ -145,7 +145,7 @@ blBtn.onclick = function () {
 
         // Set active corner //
         activeCorner = "bottom-left";
-        tlBtn.innerHTML = "&uarr;<br />Settle";
+        tlBtn.innerHTML = "Settle<br />&darr";
 
         handleWindowResize();
         playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
@@ -181,7 +181,7 @@ brBtn.onclick = function () {
 
         // Set active corner //
         activeCorner = "bottom-right";
-        tlBtn.innerHTML = "&uarr;<br />Defeat";
+        tlBtn.innerHTML = "Defeat<br />&darr";
 
         handleWindowResize();
         playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
