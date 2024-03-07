@@ -104,5 +104,42 @@ h1, h2, h5, p{
 
 #grid__tl__btn:active,
 #grid__br__btn:active {
-    transform: rotate(-45deg) scale(1.05); /*rotate for the position set */
+    transform: rotate(-45deg) scale(1.05); /*rotate for the position from the default position */
+}
+
+#grid__bl__btn:active,
+#grid__br__btn:active {
+    transform: rotate(45deg) scale(1.05);
+}
+
+/* Top Left Corner */
+#grid__tl__btn {
+    top: -11.5rem;
+    left: -11.5rem;
+    transform: rotate(-45deg)
+}
+
+#grid__tl__content {
+    width: 30vw;
+    top: 10vh;
+    left: 0;
+   /* transform: translateX(-100vw) translateY(-100vh); */
+}
+
+article {
+    background: snow;
+    font-size: 0.8rem;
+    list-style: none;
+    border: 2.5px solid rgb(127, 1, 1);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    width: 8.75rem;
+    min-width: 8.75rem;
+}
+
+article h3 {
+    font-size: 1rem;
+    padding: 0.3rem;
+    border-bottom: 1.5px solid rgb(6, 6, 6);
 }
