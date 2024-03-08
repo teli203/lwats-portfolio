@@ -81,6 +81,8 @@ function handleWindowResize(){
         case "bottom-right":
 
         break;
+
+        default:
     }
 
 }
@@ -107,7 +109,43 @@ function playAnimation(animation, reverseAnimation) {
 }
 
 function playClosingAnimation(reverseAnimation) {
+    tlBtn.innerHTML = "About"
+   // trBtn.innerHTML = "Merch"
+   // blBtn.innerHTML = "Book"
+   // brBtn.innerHTML = "Blog"
 
+   switch (activeCorner) {
+    case "top-left":
+        tlBtn.style.background =bgColor;
+        tlBtn.style.color = textColor;
+        tlContent.style.transform = tlHidden;
+        break;
+   // case "top-right":
+   //     trBtn.style.background =bgColor;
+   //     trBtn.style.color = textColor;
+   //     trContent.style.transform = tlHidden;
+   //     break;
+  //  case "bottom-left":
+    //    blBtn.style.background =bgColor;
+    //    blBtn.style.color = textColor;
+    //    blContent.style.transform = tlHidden;
+    //    break;
+   // case "bottom-right":
+      //  brBtn.style.background =bgColor;
+     //   brBtn.style.color = textColor;
+    //    brContent.style.transform = tlHidden;
+   //     break;
+
+        default: 
+   }
+
+   heroImage.className = "";
+   lastReverseAnimation = "";
+   activeCorner = "";
+   heroImage.classList.add(reverseAnimation);
+   setTimeout(function () {
+    heroImage.classList.remove(reverseAnimation)
+   }, 200);
 }
 
 // Onclick Corner Btn functions //
