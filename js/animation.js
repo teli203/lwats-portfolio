@@ -48,7 +48,12 @@ window.addEventListener("resize",handleWindowResize);
 function handleWindowResize(){
     switch (activeCorner) {
         case "top-left":
+            if (window.innerWidth <= 1100) {
+                tlActive = "translateX(0) translateY(0)";
+                tlContent.style.width = "100vw";
+            } else {
 
+            }
         break;
         case "top-right":
 
