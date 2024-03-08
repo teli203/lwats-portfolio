@@ -54,6 +54,8 @@ let lastReverseAnimation = "";
 
 // Play animation //
 function playAnimation(animation, reverseAnimation) {
+  //  Remove all the animation classes from heroImage //
+  heroImage.className = "";
   if (lastReverseAnimation !== "") {
     // Btn Clicked! reverse code goes here //
    heroImage.classList.add(lastReverseAnimation);
