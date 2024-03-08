@@ -2,7 +2,7 @@
 @keyframes hover {
     0% {
         /* write 1st code direction @ 0% */
-        transform: translateY(0);
+        transform: var(--tl-1);
     }
     50% {
         /* write 2nd code direction @ 50% */
@@ -10,6 +10,33 @@
     }
     100% {
         /* write 3rd code direction @ 100% */
-        transform: translateY(0);
+        transform: var(--tl-1);
+    }
+}
+
+/* Animate Top Left */
+.animate-top-left {
+    animation-name: top-left;
+}
+
+.reverse-animate-top-left {
+    animation-name: reverse-top-left;
+}
+
+@keyframes top-left {
+    0% {
+        background-image: var(--tl-1);
+    }
+    25% {
+        background-image: var(--tl-2);
+    }
+    50% {
+        background-image: var(--tl-3);
+    }
+    75% {
+        background-image: var(--tl-4);
+    }
+    100% {
+        background-image: var(--tl-5);
     }
 }
