@@ -16,9 +16,9 @@ const trContent = document.querySelector("#grid__tr__content");
 const blContent = document.querySelector("#grid__bl__content");
 const brContent = document.querySelector("#grid__br__content");
 
-const bookOne = document.querySelector("#.b-1");
-const bookTwo = document.querySelector("#.b-2");
-const bookThree = document.querySelector("#.b-3");
+const projectOne = document.querySelector("#.b-1");
+const projectTwo = document.querySelector("#.b-2");
+const projectThree = document.querySelector("#.b-3");
 
 // Colors & Positions //
 const bgColor = "var(--bg)";
@@ -39,7 +39,7 @@ let brActive = "translate(-5vw) translateY(0)";
 let brHidden = "translateX(100vw) translateY(100vh)";
 
 // Define Corners that are Open //
-let activeCorner ="";
+let activeCorner = "";
 
 //Add an EventListener to the window object to listen for resize event (listen,click,etc) //
 window.addEventListener("resize",handleWindowResize);
@@ -94,14 +94,14 @@ function playClosingAnimation(reverseAnimation) {
 }
 
 // Onclick Corner Btn functions //
-// top left btn About Author & Blog//
+// top left btn About //
 tlBtn.onclick = function () {
     if (activeCorner === "top-left") {
-        playClosingAnimation(reverse-animate-top-left);
+        playClosingAnimation("reverse-animate-top-left");
     } else {
-        trActive.innerHTML = "Triumph";
-        blActive.innerHTML = "Settle";
-        brActive.innerHTML = "Defeat";
+        trActive.innerHTML = "Merch";
+        blActive.innerHTML = "Books";
+        brActive.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "top-left";
@@ -130,18 +130,18 @@ tlBtn.onclick = function () {
     }
 };
 
-// top right btn book 3//
+// top right btn Merch //
 trBtn.onclick = function () {
     if (activeCorner === "top-right") {
-        playClosingAnimation(reverse-animate-top-right);
+        playClosingAnimation("reverse-animate-top-right");
     } else {
         tlActive.innerHTML = "About";
-        blActive.innerHTML = "Settle";
-        brActive.innerHTML = "Defeat";
+        blActive.innerHTML = "Books";
+        brActive.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "top-right";
-        tlBtn.innerHTML = "&uarr;<br />Triumph";
+        trBtn.innerHTML = "&uarr;<br />Merch";
 
         handleWindowResize();
         playAnimation("animate-top-right", "reverse-animate-top-right");
@@ -166,18 +166,18 @@ trBtn.onclick = function () {
     }
 };
 
-// bottom left btn  book 1//
+// bottom left btn Books //
 blBtn.onclick = function () {
     if (activeCorner === "bottom-left") {
-        playClosingAnimation(reverse-animate-bottom-left);
+        playClosingAnimation("reverse-animate-bottom-left");
     } else {
         tlActive.innerHTML = "About";
-        trActive.innerHTML = "Triumph";
-        brActive.innerHTML = "Defeat";
+        trActive.innerHTML = "Merch";
+        brActive.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "bottom-left";
-        tlBtn.innerHTML = "Settle<br />&darr";
+        blBtn.innerHTML = "Books<br />&darr";
 
         handleWindowResize();
         playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
@@ -202,18 +202,18 @@ blBtn.onclick = function () {
     }
 };
 
-// bottom right btn book 3//
+// bottom right btn blog//
 brBtn.onclick = function () {
     if (activeCorner === "bottom-right") {
-        playClosingAnimation(reverse-animate-bottom-right);
+        playClosingAnimation("reverse-animate-bottom-right");
     } else {
         tlActive.innerHTML = "About";
-        blActive.innerHTML = "Settle";
-        trActive.innerHTML = "Triumph";
+        trActive.innerHTML = "Merch";
+        blActive.innerHTML = "Books";
 
         // Set active corner //
         activeCorner = "bottom-right";
-        tlBtn.innerHTML = "Defeat<br />&darr";
+        brBtn.innerHTML = "Blog<br />&darr";
 
         handleWindowResize();
         playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
