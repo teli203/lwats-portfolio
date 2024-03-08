@@ -46,7 +46,21 @@ window.addEventListener("resize",handleWindowResize);
 
 // Function that handles the styling when resizing window //
 function handleWindowResize(){
-    // write function //
+    switch (activeCorner) {
+        case "top-left":
+
+        break;
+        case "top-right":
+
+        break;
+        case "bottom-left":
+
+        break;
+        case "bottom-right":
+
+        break;
+    }
+
 }
 
 // Store the last reverse animation, ready to be played //
