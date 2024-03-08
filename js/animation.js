@@ -50,9 +50,26 @@ function handleWindowResize(){
         case "top-left":
             if (window.innerWidth <= 1100) {
                 tlActive = "translateX(0) translateY(0)";
+                tlContent.style.transform = "translateX(5vw) translateY(0)";
                 tlContent.style.width = "100vw";
+                tlContent.style.height = "100vw";
+                tlContent.style.top = "0";
+                tlContent.style.display = "flex";
+                tlContent.style.alignItems = "center";
+                tlContent.style.justifyContent = "center";
+                tlContent.style.background = "var(--bg-transparent)";
+                tlContent.style.zIndex = "200";
+                tlBtn.style.zindex = "300";
+                //trBtn.style.zindex = "100";
+                //blBtn.style.zindex = "100";
+                //brBtn.style.zindex = "100";
             } else {
-
+                tlActive = "translateX(5vw) translateY(0)";
+                tlContent.style.transform = "translateX(5vw) translateY(0)";
+                tlContent.style.width = "30vw";
+                tlContent.style.height = "0";
+                tlContent.style.top = "10vh";
+                tlContent.style.display = "block";
             }
         break;
         case "top-right":
