@@ -241,6 +241,7 @@ font-size: 0.75rem;
 
 .project {
     width: 100%;
+    display: flex;
     flex-wrap: wrap;
     border-radius: 2rem;
     overflow: hidden;
@@ -301,4 +302,6 @@ font-size: 0.75rem;
   .arrow:hover {
     cursor: pointer;
   }
+
+  /* Bottom Right Corner */
   
