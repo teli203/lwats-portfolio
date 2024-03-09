@@ -128,7 +128,7 @@ h1, h2, h5, p{
 }
 
 article {
-    background: snow;
+    background: gainsboro;
     font-size: 0.8rem;
     list-style: none;
     border: 2.5px solid rgb(127, 1, 1);

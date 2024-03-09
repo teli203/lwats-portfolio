@@ -60,9 +60,9 @@ function handleWindowResize(){
                 tlContent.style.background = "var(--bg-transparent)";
                 tlContent.style.zIndex = "200";
                 tlBtn.style.zindex = "300";
-                //trBtn.style.zindex = "100";
-                //blBtn.style.zindex = "100";
-                //brBtn.style.zindex = "100";
+                trBtn.style.zindex = "100";
+                blBtn.style.zindex = "100";
+                brBtn.style.zindex = "100";
             } else {
                 tlActive = "translateX(5vw) translateY(0)";
                 tlContent.style.transform = "translateX(5vw) translateY(0)";
@@ -72,47 +72,116 @@ function handleWindowResize(){
                 tlContent.style.display = "block";
             }
         break;
+
         case "top-right":
+            if (window.innerWidth <= 1100) {
+                trActive = "translateX(0) translateY(0)";
+                trContent.style.transform = "translateX(0vw) translateY(0)";
+                trContent.style.width = "100vw";
+                trContent.style.height = "100vh";
+                trContent.style.top = "0";
+                trContent.style.display = "flex";
+                trContent.style.alignItems = "center";
+                trContent.style.justifyContent = "center";
+                trContent.style.background = "var(--bg-transparent)";
+                trContent.style.zIndex = "200";
+                trBtn.style.zIndex = "300";
+                tlBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "100";
+              } else {
+                trActive = "translateX(-5vw) translateY(0)";
+                trContent.style.transform = "translateX(-5vw) translateY(0)";
+                trContent.style.width = "30vw";
+                trContent.style.height = "0";
+                trContent.style.top = "10vh";
+                trContent.style.display = "block";
+              }
+              break;
 
-        break;
         case "bottom-left":
+            if (window.innerWidth <= 600) {
+                blActive = "translateX(0) translateY(0)";
+                blContent.style.transform = "translateX(0vw) translateY(0)";
+                blContent.style.width = "100vw";
+                blContent.style.height = "100vh";
+                blContent.style.top = "0";
+                blContent.style.display = "flex";
+                blContent.style.alignItems = "center";
+                blContent.style.justifyContent = "center";
+                blContent.style.background = "var(--bg-transparent)";
+                blContent.style.zIndex = "200";
+                trBtn.style.zIndex = "100";
+                tlBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "300";
+                brBtn.style.zIndex = "100";
+            } else {
+                blActive = "translateX(10vw) translateY(7vh)";
+                blContent.style.transform = "translateX(10vw) translateY(7vh)";
+                blContent.style.width = "15rem";
+                blContent.style.height = "0";
+                blContent.style.top = "40vh";
+                blContent.style.display = "block";
+            }
+            break;
 
-        break;
         case "bottom-right":
-
-        break;
+            if (window.innerWidth <= 1100) {
+                brActive = "translateX(0) translateY(0)";
+                brContent.style.transform = "translateX(0vw) translateY(0)";
+                brContent.style.width = "100vw";
+                brContent.style.height = "100vh";
+                brContent.style.bottom = "0";
+                brContent.style.display = "flex";
+                brContent.style.flexDirection = "column";
+                brContent.style.alignItems = "center";
+                brContent.style.justifyContent = "center";
+                brContent.style.background = "var(--bg-transparent)";
+                brContent.style.zIndex = "200";
+                trBtn.style.zIndex = "100";
+                tlBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "300";
+        } else {
+                brActive = "translateX(-5vw) translateY(0)";
+                brContent.style.transform = "translateX(-5vw) translateY(0)";
+                brContent.style.width = "30vw";
+                brContent.style.height = "0";
+                brContent.style.bottom = "30vh";
+                brContent.style.display = "block";
+            }
+            break;
 
         default:
     }
-
-}
+}     
 
 // Store the last reverse animation, ready to be played //
 let lastReverseAnimation = "";
 
 // Play animation //
 function playAnimation(animation, reverseAnimation) {
-  //  Remove all the animation classes from heroImage //
-  heroImage.className = "";
+  // Remove all the animation classes from heroImage //
+     heroImage.className = "";
   if (lastReverseAnimation !== "") {
-    // Btn Clicked! reverse code goes here //
-   heroImage.classList.add(lastReverseAnimation);
+ // Btn Clicked! reverse code goes here //
+     heroImage.classList.add(lastReverseAnimation);
    setTimeout(function () {
-    heroImage.classList.remove(lastReverseAnimation);
-    heroImage.classList.add(animation);
+     heroImage.classList.remove(lastReverseAnimation);
+     heroImage.classList.add(animation);
     lastReverseAnimation = reverseAnimation;
    }, 200);
   } else {
-    heroImage.classList.add(animation);
-    lastReverseAnimation = reverseAnimation;
+     heroImage.classList.add(animation);
+     lastReverseAnimation = reverseAnimation;
   }  
 }
 
 function playClosingAnimation(reverseAnimation) {
     tlBtn.innerHTML = "About"
-   // trBtn.innerHTML = "Merch"
-   // blBtn.innerHTML = "Book"
-   // brBtn.innerHTML = "Blog"
+    trBtn.innerHTML = "Merch"
+    blBtn.innerHTML = "Book"
+    brBtn.innerHTML = "Blog"
 
    switch (activeCorner) {
     case "top-left":
@@ -120,21 +189,21 @@ function playClosingAnimation(reverseAnimation) {
         tlBtn.style.color = textColor;
         tlContent.style.transform = tlHidden;
         break;
-   // case "top-right":
-   //     trBtn.style.background =bgColor;
-   //     trBtn.style.color = textColor;
-   //     trContent.style.transform = tlHidden;
-   //     break;
-  //  case "bottom-left":
-    //    blBtn.style.background =bgColor;
-    //    blBtn.style.color = textColor;
-    //    blContent.style.transform = tlHidden;
-    //    break;
-   // case "bottom-right":
-      //  brBtn.style.background =bgColor;
-     //   brBtn.style.color = textColor;
-    //    brContent.style.transform = tlHidden;
-   //     break;
+    case "top-right":
+        trBtn.style.background =bgColor;
+        trBtn.style.color = textColor;
+        trContent.style.transform = tlHidden;
+        break;
+   case "bottom-left":
+        blBtn.style.background =bgColor;
+        blBtn.style.color = textColor;
+        blContent.style.transform = tlHidden;
+        break;
+   case "bottom-right":
+        brBtn.style.background =bgColor;
+        brBtn.style.color = textColor;
+        brContent.style.transform = tlHidden;
+        break;
 
         default: 
    }
