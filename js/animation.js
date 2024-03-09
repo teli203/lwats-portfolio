@@ -189,7 +189,7 @@ function handleWindowResize(){
 // Store the last reverse animation, ready to be played //
 let lastReverseAnimation = "";
 
-// Play animation //
+// Play Animation Function//
 function playAnimation(animation, reverseAnimation) {
   // Remove all the animation classes from heroImage //
      heroImage.className = "";
@@ -222,18 +222,18 @@ function playClosingAnimation(reverseAnimation) {
     case "top-right":
         trBtn.style.background =bgColor;
         trBtn.style.color = textColor;
-        trContent.style.transform = tlHidden;
+        trContent.style.transform = trHidden;
         break;
    case "bottom-left":
         blBtn.style.background =bgColor;
         blBtn.style.color = textColor;
-        blContent.style.transform = tlHidden;
+        blContent.style.transform = blHidden;
         break;
-   case "bottom-right":
-        brBtn.style.background =bgColor;
-        brBtn.style.color = textColor;
-        brContent.style.transform = tlHidden;
-        break;
+   //case "bottom-right":
+    //    brBtn.style.background =bgColor;
+   //     brBtn.style.color = textColor;
+       // brContent.style.transform = brHidden;
+       // break;
 
         default: 
    }
@@ -255,7 +255,7 @@ tlBtn.onclick = function () {
     } else {
         trActive.innerHTML = "Merch";
         blActive.innerHTML = "Books";
-        brActive.innerHTML = "Blog";
+        //brActive.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "top-left";
@@ -278,7 +278,7 @@ tlBtn.onclick = function () {
 
         // Change of the Corners Content //
         trContent.style.transform = trHidden;
-        brContent.style.transform = brHidden;
+        //brContent.style.transform = brHidden;
         blContent.style.transform = blHidden;
         tlContent.style.transform = tlActive;
     }
@@ -289,32 +289,32 @@ trBtn.onclick = function () {
     if (activeCorner === "top-right") {
         playClosingAnimation("reverse-animate-top-right");
     } else {
-        tlActive.innerHTML = "About";
-        blActive.innerHTML = "Books";
-        brActive.innerHTML = "Blog";
+        tlBtn.innerHTML = "About";
+        blBtn.innerHTML = "Books";
+       // brBtn.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "top-right";
-        trBtn.innerHTML = "&uarr;<br />Merch";
+        trBtn.innerHTML = "&uarr;<br/>Merch";
 
         handleWindowResize();
         playAnimation("animate-top-right", "reverse-animate-top-right");
 
         // Change Background Colors //
         trBtn.style.background = bgColorAlt;
-        brBtn.style.background = bgColor;
+       // brBtn.style.background = bgColor;
         blBtn.style.background = bgColor;
         tlBtn.style.background = bgColor;
 
         // Change Text Colors //
         trBtn.style.color = textColorAlt;
-        brBtn.style.color = textColor;
+       // brBtn.style.color = textColor;
         blBtn.style.color = textColor;
         tlBtn.style.color = textColor;
 
         // Change of the Corners Content //
         trContent.style.transform = trActive;
-        brContent.style.transform = brHidden;
+        //brContent.style.transform = brHidden;
         blContent.style.transform = blHidden;
         tlContent.style.transform = tlHidden;
     }
@@ -325,69 +325,69 @@ blBtn.onclick = function () {
     if (activeCorner === "bottom-left") {
         playClosingAnimation("reverse-animate-bottom-left");
     } else {
-        tlActive.innerHTML = "About";
-        trActive.innerHTML = "Merch";
-        brActive.innerHTML = "Blog";
+        tlBtn.innerHTML = "About";
+        trBtn.innerHTML = "Merch";
+       // brBtn.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "bottom-left";
-        blBtn.innerHTML = "Books<br />&darr;";
+        blBtn.innerHTML = "Books<br/>&darr;";
 
         handleWindowResize();
         playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
 
         // Change Background Colors //
         trBtn.style.background = bgColor;
-        brBtn.style.background = bgColor;
+       // brBtn.style.background = bgColor;
         blBtn.style.background = bgColorAlt;
         tlBtn.style.background = bgColor;
 
         // Change Text Colors //
         trBtn.style.color = textColor;
         brBtn.style.color = textColor;
-        blBtn.style.color = textAlt;
+        blBtn.style.color = textColorAlt;
         tlBtn.style.color = textColor;
 
-        // Change of the Corners Content //
+        // Change position of the Corners Content //
         trContent.style.transform = trHidden;
-        brContent.style.transform = brHidden;
+       // brContent.style.transform = brHidden;
         blContent.style.transform = blActive;
         tlContent.style.transform = tlHidden;
     }
 };
 
 // bottom right btn blog//
-brBtn.onclick = function () {
-    if (activeCorner === "bottom-right") {
-        playClosingAnimation("reverse-animate-bottom-right");
-    } else {
-        tlActive.innerHTML = "About";
-        trActive.innerHTML = "Merch";
-        blActive.innerHTML = "Books";
+//brBtn.onclick = function () {
+//    if (activeCorner === "bottom-right") {
+//        playClosingAnimation("reverse-animate-bottom-right");
+//    } else {
+//        tlBtn.innerHTML = "About";
+//        trBtn.innerHTML = "Merch";
+//        blBtn.innerHTML = "Books";
 
         // Set active corner //
-        activeCorner = "bottom-right";
-        brBtn.innerHTML = "Blog<br/>&darr;";
+ //       activeCorner = "bottom-right";
+ //       brBtn.innerHTML = "Blog<br/>&darr;";
 
-        handleWindowResize();
-        playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
+ //       handleWindowResize();
+ //       playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
 
         // Change Background Colors //
-        trBtn.style.background = bgColor;
-        brBtn.style.background = bgAlt;
-        blBtn.style.background = bgColor;
-        tlBtn.style.background = bgColor;
+//        trBtn.style.background = bgColor;
+//        brBtn.style.background = bgColorAlt;
+//        blBtn.style.background = bgColor;
+//        tlBtn.style.background = bgColor;
 
         // Change Text Colors //
-        trBtn.style.color = textColor;
-        brBtn.style.color = textAlt;
-        blBtn.style.color = textColor;
-        tlBtn.style.color = textColor;
+//        trBtn.style.color = textColor;
+//        brBtn.style.color = textColorAlt;
+//        blBtn.style.color = textColor;
+//        tlBtn.style.color = textColor;
 
         // Change of the Corners Content //
-        trContent.style.transform = trHidden;
-        brContent.style.transform = brActive;
-        blContent.style.transform = blHidden;
-        tlContent.style.transform = tlHidden;
+//        trContent.style.transform = trHidden;
+//        brContent.style.transform = brActive;
+//        blContent.style.transform = blHidden;
+//        tlContent.style.transform = tlHidden;
     }
 };
