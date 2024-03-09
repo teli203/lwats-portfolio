@@ -228,4 +228,33 @@ font-size: 0.75rem;
 /* Bottom Left Corner */
 #grid__bl__btn {
     bottom: -11.5rem;
+    left: -11.5rem;
+    transform: rotate(45deg);
+}
+
+#grid__bl__content {
+    width: 15rem;
+    bottom: 15vh;
+    left: 0;
+   /* transform: translateX(-100vw) translateY(100vh); */
+}
+
+.project {
+    width: 100%;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: auto auto 0.5rem;
+    border: var();
+}
+
+.project__img {      /* its a 100% of the projects container */
+    width: 100%;
+}
+
+.project__title {
+    width: 100%;
+    margin: 0;
+    padding: 0.3rem 0;
+    font-size: 1rem;
 }
