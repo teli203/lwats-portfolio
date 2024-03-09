@@ -236,7 +236,7 @@ font-size: 0.75rem;
     width: 15rem;
     bottom: 15vh;
     left: 0;
-   /* transform: translateX(-100vw) translateY(100vh); */
+    transform: translateX(-100vw) translateY(100vh);
 }
 
 .project {

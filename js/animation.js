@@ -4,17 +4,17 @@ const heroImage = document.querySelector("hero__animation__img");
 const tl = document.querySelector("#grid__tl");
 const tr = document.querySelector("#grid__tr");
 const bl = document.querySelector("#grid__bl");
-const br = document.querySelector("#grid__br");
+//const br = document.querySelector("#grid__br");//
 
 const tlBtn = document.querySelector("#grid__tl__btn");
 const trBtn = document.querySelector("#grid__tr__btn");
 const blBtn = document.querySelector("#grid__bl__btn");
-const brBtn = document.querySelector("#grid__br__btn");
+//const brBtn = document.querySelector("#grid__br__btn");//
 
 const tlContent = document.querySelector("#grid__tl__content");
 const trContent = document.querySelector("#grid__tr__content");
 const blContent = document.querySelector("#grid__bl__content");
-const brContent = document.querySelector("#grid__br__content");
+//const brContent = document.querySelector("#grid__br__content");//
 
 const projectOne = document.querySelector(".p-1");
 const projectTwo = document.querySelector(".p-2");
@@ -62,7 +62,7 @@ function handleWindowResize(){
                 tlBtn.style.zindex = "300";
                 trBtn.style.zindex = "100";
                 blBtn.style.zindex = "100";
-                brBtn.style.zindex = "100";
+               // brBtn.style.zindex = "100";
             } else {
                 tlActive = "translateX(5vw) translateY(0)";
                 tlContent.style.transform = "translateX(5vw) translateY(0)";
@@ -88,7 +88,7 @@ function handleWindowResize(){
                 trBtn.style.zIndex = "300";
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "100";
-                brBtn.style.zIndex = "100";
+                //brBtn.style.zIndex = "100";
               } else {
                 trActive = "translateX(-5vw) translateY(0)";
                 trContent.style.transform = "translateX(-5vw) translateY(0)";
@@ -114,43 +114,54 @@ function handleWindowResize(){
                 trBtn.style.zIndex = "100";
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
-                brBtn.style.zIndex = "100";
-            } else {
-                blActive = "translateX(10vw) translateY(7vh)";
-                blContent.style.transform = "translateX(10vw) translateY(7vh)";
-                blContent.style.width = "15rem";
+               // brBtn.style.zIndex = "100";
+               projectOne.style.margin = "70";
+               projectOne.style.margin = "auto auto 0.5rem";
+               projectTwo.style.margin = "70";
+               projectThree.style.margin = "70";
+            } else if (window.innerWidth <= 1100) {
+                blActive = "translateX(-5vw) translateY(0)";
+                blContent.style.transform = "translateX(-5vw) translateY(0)";
+                blContent.style.width = "30vw";
                 blContent.style.height = "0";
-                blContent.style.top = "40vh";
+                blContent.style.top = "10vh";
+                blContent.style.display = "block";
+            } else {
+                blActive = "translateX(-5vw) translateY(0)";
+                blContent.style.transform = "translateX(-5vw) translateY(0)";
+                blContent.style.width = "30vw";
+                blContent.style.height = "0";
+                blContent.style.top = "10vh";
                 blContent.style.display = "block";
             }
             break;
 
-        case "bottom-right":
-            if (window.innerWidth <= 1100) {
-                brActive = "translateX(0) translateY(0)";
-                brContent.style.transform = "translateX(0vw) translateY(0)";
-                brContent.style.width = "100vw";
-                brContent.style.height = "100vh";
-                brContent.style.bottom = "0";
-                brContent.style.display = "flex";
-                brContent.style.flexDirection = "column";
-                brContent.style.alignItems = "center";
-                brContent.style.justifyContent = "center";
-                brContent.style.background = "var(--bg-transparent)";
-                brContent.style.zIndex = "200";
-                trBtn.style.zIndex = "100";
-                tlBtn.style.zIndex = "100";
-                blBtn.style.zIndex = "100";
-                brBtn.style.zIndex = "300";
-        } else {
-                brActive = "translateX(-5vw) translateY(0)";
-                brContent.style.transform = "translateX(-5vw) translateY(0)";
-                brContent.style.width = "30vw";
-                brContent.style.height = "0";
-                brContent.style.bottom = "30vh";
-                brContent.style.display = "block";
-            }
-            break;
+      //  case "bottom-right":
+      //      if (window.innerWidth <= 1100) {
+      //          brActive = "translateX(0) translateY(0)";
+      //          brContent.style.transform = "translateX(0vw) translateY(0)";
+      //          brContent.style.width = "100vw";
+      //          brContent.style.height = "100vh";
+      //          brContent.style.bottom = "0";
+     //           brContent.style.display = "flex";
+     //           brContent.style.flexDirection = "column";
+      //          brContent.style.alignItems = "center";
+     //           brContent.style.justifyContent = "center";
+    //            brContent.style.background = "var(--bg-transparent)";
+     //           brContent.style.zIndex = "200";
+      //          trBtn.style.zIndex = "100";
+     //           tlBtn.style.zIndex = "100";
+      //          blBtn.style.zIndex = "100";
+      //          brBtn.style.zIndex = "300";
+     //   } else {
+     //           brActive = "translateX(-5vw) translateY(0)";
+      //          brContent.style.transform = "translateX(-5vw) translateY(0)";
+      //          brContent.style.width = "30vw";
+     //           brContent.style.height = "0";
+     //           brContent.style.bottom = "30vh";
+     //           brContent.style.display = "block";
+     //       }
+      //      break; //
 
         default:
     }
