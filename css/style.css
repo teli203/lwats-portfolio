@@ -226,3 +226,6 @@ font-size: 0.75rem;
 }
 
 /* Bottom Left Corner */
+#grid__bl__btn {
+    bottom: -11.5rem;
+}
