@@ -245,7 +245,8 @@ font-size: 0.75rem;
     border-radius: 2rem;
     overflow: hidden;
     margin: auto auto 0.5rem;
-    border: var();
+    border: 2.5px solid rgb(127, 1, 1);
+    background: var(--bg-alt);
 }
 
 .project__img {      /* its a 100% of the projects container */
@@ -257,4 +258,20 @@ font-size: 0.75rem;
     margin: 0;
     padding: 0.3rem 0;
     font-size: 1rem;
+    color: rgba(255, 255, 255, 0.836);
 }
+
+button {
+    background: rgb(190, 188, 188);
+    border-radius: 2rem;
+    padding: 0.4rem;
+    border: 2px solid black 
+}
+
+.btn {
+    border-radius: 2rem;
+    height: 2rem;
+    flex-basis: 50%;
+    font-weight: 550;
+}
+
