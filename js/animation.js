@@ -115,10 +115,12 @@ function handleWindowResize(){
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
                // brBtn.style.zIndex = "100";
-               projectOne.style.margin = "70";
+               projectOne.style.margin = "70%";
                projectOne.style.margin = "auto auto 0.5rem";
-               projectTwo.style.margin = "70";
-               projectThree.style.margin = "70";
+               projectTwo.style.margin = "70%";
+               projectTwo.style.margin = "auto auto 0.5rem";
+               projectThree.style.margin = "70%";
+               projectThree.style.margin = "auto auto 0.5rem";
             } else if (window.innerWidth <= 1100) {
                 blActive = "translateX(-5vw) translateY(0)";
                 blContent.style.transform = "translateX(-5vw) translateY(0)";
