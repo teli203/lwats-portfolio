@@ -36,7 +36,7 @@ let blActive = "translate(10vw) translateY(7)";
 let blHidden = "translateX(-100vw) translateY(100vh)";
 
 let brActive = "translate(-5vw) translateY(0)"; 
-let brHidden = "translateX(100vw) translateY(100vh)";
+//let brHidden = "translateX(100vw) translateY(100vh)";//
 
 // Define Corners that are Open //
 let activeCorner = "";
@@ -50,9 +50,9 @@ function handleWindowResize(){
         case "top-left":
             if (window.innerWidth <= 1100) {
                 tlActive = "translateX(0) translateY(0)";
-                tlContent.style.transform = "translateX(5vw) translateY(0)";
+                tlContent.style.transform = "translateX(0vw) translateY(0)";
                 tlContent.style.width = "100vw";
-                tlContent.style.height = "100vw";
+                tlContent.style.height = "100vh";
                 tlContent.style.top = "0";
                 tlContent.style.display = "flex";
                 tlContent.style.alignItems = "center";
@@ -115,11 +115,11 @@ function handleWindowResize(){
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
                // brBtn.style.zIndex = "100";
-               projectOne.style.margin = "70%";
+               projectOne.style.width = "70%";
                projectOne.style.margin = "auto auto 0.5rem";
-               projectTwo.style.margin = "70%";
+               projectTwo.style.width = "70%";
                projectTwo.style.margin = "auto auto 0.5rem";
-               projectThree.style.margin = "70%";
+               projectThree.style.width = "70%";
                projectThree.style.margin = "auto auto 0.5rem";
             } else if (window.innerWidth <= 1100) {
                 blActive = "translateX(0) translateY(0)";
@@ -136,19 +136,22 @@ function handleWindowResize(){
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
                // brBtn.style.zIndex = "100";
-               projectOne.style.margin = "40%";
+               projectOne.style.width = "40%";
                projectOne.style.margin = "auto auto 0.5rem";
-               projectTwo.style.margin = "40%";
+               projectTwo.style.width = "40%";
                projectTwo.style.margin = "auto auto 0.5rem";
-               projectThree.style.margin = "40%";
+               projectThree.style.width = "40%";
                projectThree.style.margin = "auto auto 0.5rem";
             } else {
-                blActive = "translateX(-5vw) translateY(0)";
-                blContent.style.transform = "translateX(-5vw) translateY(0)";
-                blContent.style.width = "30vw";
+                blActive = "translateX(10vw) translateY(7vh)";
+                blContent.style.transform = "translateX(10vw) translateY(7vh)";
+                blContent.style.width = "15vw";
                 blContent.style.height = "0";
-                blContent.style.top = "10vh";
+                blContent.style.top = "40vh";
                 blContent.style.display = "block";
+                projectOne.style.width = "100%";
+                projectTwo.style.width = "100%";
+                projectThree.style.width = "100%";
             }
             break;
 
