@@ -301,7 +301,7 @@ blBtn.onclick = function () {
 
         // Set active corner //
         activeCorner = "bottom-left";
-        blBtn.innerHTML = "Books<br />&darr";
+        blBtn.innerHTML = "Books<br />&darr;";
 
         handleWindowResize();
         playAnimation("animate-bottom-left", "reverse-animate-bottom-left");
@@ -337,7 +337,7 @@ brBtn.onclick = function () {
 
         // Set active corner //
         activeCorner = "bottom-right";
-        brBtn.innerHTML = "Blog<br />&darr";
+        brBtn.innerHTML = "Blog<br/>&darr;";
 
         handleWindowResize();
         playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
