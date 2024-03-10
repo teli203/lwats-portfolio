@@ -108,8 +108,8 @@ h1, h2, h3, h5, p {
     transform: rotate(-45deg) scale(1.05); /*rotate for the position from the default position */
 }
 
-#grid__bl__btn:active,
-#grid__br__btn:active {
+#grid__tr__btn:active,
+#grid__bl__btn:active {
     transform: rotate(45deg) scale(1.05);
 }
 
@@ -311,9 +311,9 @@ font-size: 0.75rem;
   }
 
   #grid__br__content {
-    bottom: 15vh;
-    right: 5vw;
-    /*transform: translateX(100vw) translateY(100vh);*/
+    bottom: 0;
+    right: 0vw;
+    transform: translateX(100vw) translateY(100vh);
   }
 
   #grid__br__content div {
@@ -321,6 +321,7 @@ font-size: 0.75rem;
     margin: 0.5rem auto;
     gap: 1.2rem;
     width: 17rem;
+    padding: 0.2rem 0.1rem;
   }
 
   .contact-text {
@@ -328,6 +329,6 @@ font-size: 0.75rem;
   }
 
   .btn-contact {
-    border: var(--border);
+    border: 2.5px solid rgb(127, 1, 1);
     border-radius: 2rem;
   }

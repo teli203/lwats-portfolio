@@ -4,17 +4,17 @@ const heroImage = document.querySelector("hero__animation__img");
 const tl = document.querySelector("#grid__tl");
 const tr = document.querySelector("#grid__tr");
 const bl = document.querySelector("#grid__bl");
-//const br = document.querySelector("#grid__br");//
+const br = document.querySelector("#grid__br");
 
 const tlBtn = document.querySelector("#grid__tl__btn");
 const trBtn = document.querySelector("#grid__tr__btn");
 const blBtn = document.querySelector("#grid__bl__btn");
-//const brBtn = document.querySelector("#grid__br__btn");//
+const brBtn = document.querySelector("#grid__br__btn");
 
 const tlContent = document.querySelector("#grid__tl__content");
 const trContent = document.querySelector("#grid__tr__content");
 const blContent = document.querySelector("#grid__bl__content");
-//const brContent = document.querySelector("#grid__br__content");//
+const brContent = document.querySelector("#grid__br__content");
 
 const projectOne = document.querySelector(".p-1");
 const projectTwo = document.querySelector(".p-2");
@@ -35,8 +35,8 @@ let trHidden = "translateX(100vw) translateY(-100vh)";
 let blActive = "translate(10vw) translateY(7)"; 
 let blHidden = "translateX(-100vw) translateY(100vh)";
 
-//let brActive = "translate(-5vw) translateY(0)"; 
-//let brHidden = "translateX(100vw) translateY(100vh)";//
+let brActive = "translate(-5vw) translateY(0)"; 
+let brHidden = "translateX(100vw) translateY(100vh)";
 
 // Define Corners that are Open //
 let activeCorner = "";
@@ -62,7 +62,7 @@ function handleWindowResize(){
                 tlBtn.style.zIndex = "300";
                 trBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "100";
-               // brBtn.style.zindex = "100";
+                brBtn.style.zIndex = "100";
             } else {
                 tlActive = "translateX(5vw) translateY(0)";
                 tlContent.style.transform = "translateX(5vw) translateY(0)";
@@ -88,7 +88,7 @@ function handleWindowResize(){
                 trBtn.style.zIndex = "300";
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "100";
-                //brBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "100";
               } else {
                 trActive = "translateX(-5vw) translateY(0)";
                 trContent.style.transform = "translateX(-5vw) translateY(0)";
@@ -114,7 +114,7 @@ function handleWindowResize(){
                 trBtn.style.zIndex = "100";
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
-               // brBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "100";
                projectOne.style.width = "70%";
                projectOne.style.margin = "auto auto 0.5rem";
                projectTwo.style.width = "70%";
@@ -135,7 +135,7 @@ function handleWindowResize(){
                 trBtn.style.zIndex = "100";
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
-               // brBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "100";
                projectOne.style.width = "40%";
                projectOne.style.margin = "auto auto 0.5rem";
                projectTwo.style.width = "40%";
@@ -155,32 +155,32 @@ function handleWindowResize(){
             }
             break;
 
-      //  case "bottom-right":
-      //      if (window.innerWidth <= 1100) {
-      //          brActive = "translateX(0) translateY(0)";
-      //          brContent.style.transform = "translateX(0vw) translateY(0)";
-      //          brContent.style.width = "100vw";
-      //          brContent.style.height = "100vh";
-      //          brContent.style.bottom = "0";
-     //           brContent.style.display = "flex";
-     //           brContent.style.flexDirection = "column";
-      //          brContent.style.alignItems = "center";
-     //           brContent.style.justifyContent = "center";
-    //            brContent.style.background = "var(--bg-transparent)";
-     //           brContent.style.zIndex = "200";
-      //          trBtn.style.zIndex = "100";
-     //           tlBtn.style.zIndex = "100";
-      //          blBtn.style.zIndex = "100";
-      //          brBtn.style.zIndex = "300";
-     //   } else {
-     //           brActive = "translateX(-5vw) translateY(0)";
-      //          brContent.style.transform = "translateX(-5vw) translateY(0)";
-      //          brContent.style.width = "30vw";
-     //           brContent.style.height = "0";
-     //           brContent.style.bottom = "30vh";
-     //           brContent.style.display = "block";
-     //       }
-      //      break; //
+        case "bottom-right":
+            if (window.innerWidth <= 1100) {
+                brActive = "translateX(0) translateY(0)";
+                brContent.style.transform = "translateX(0vw) translateY(0)";
+                brContent.style.width = "100vw";
+                brContent.style.height = "100vh";
+                brContent.style.bottom = "0";
+                brContent.style.display = "flex";
+                brContent.style.flexDirection = "column";
+                brContent.style.alignItems = "center";
+                brContent.style.justifyContent = "center";
+                brContent.style.background = "var(--bg-transparent)";
+                brContent.style.zIndex = "200";
+                trBtn.style.zIndex = "100";
+                tlBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "100";
+                brBtn.style.zIndex = "300";
+        } else {
+                brActive = "translateX(-5vw) translateY(0)";
+                brContent.style.transform = "translateX(-5vw) translateY(0)";
+                brContent.style.width = "30vw";
+                brContent.style.height = "0";
+                brContent.style.bottom = "30vh";
+                brContent.style.display = "block";
+            }
+            break; 
 
         default:
     }
@@ -211,7 +211,7 @@ function playClosingAnimation(reverseAnimation) {
     tlBtn.innerHTML = "About"
     trBtn.innerHTML = "Merch"
     blBtn.innerHTML = "Book"
-    //brBtn.innerHTML = "Blog"
+    brBtn.innerHTML = "Blog"
 
    switch (activeCorner) {
     case "top-left":
@@ -229,11 +229,11 @@ function playClosingAnimation(reverseAnimation) {
         blBtn.style.color = textColor;
         blContent.style.transform = blHidden;
         break;
-   //case "bottom-right":
-    //    brBtn.style.background =bgColor;
-   //     brBtn.style.color = textColor;
-       // brContent.style.transform = brHidden;
-       // break;
+   case "bottom-right":
+        brBtn.style.background =bgColor;
+        brBtn.style.color = textColor;
+        brContent.style.transform = brHidden;
+        break;
 
         default: 
    }
@@ -255,7 +255,7 @@ tlBtn.onclick = function () {
     } else {
         trActive.innerHTML = "Merch";
         blActive.innerHTML = "Books";
-        //brActive.innerHTML = "Blog";
+        brActive.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "top-left";
@@ -266,19 +266,19 @@ tlBtn.onclick = function () {
 
         // Change Background Colors //
         trBtn.style.background = bgColor;
-        //brBtn.style.background = bgColor;
+        brBtn.style.background = bgColor;
         blBtn.style.background = bgColor;
         tlBtn.style.background = bgColorAlt;
 
         // Change Text Colors //
         trBtn.style.color = textColor;
-        //brBtn.style.color = textColor;
+        brBtn.style.color = textColor;
         blBtn.style.color = textColor;
         tlBtn.style.color = textColorAlt;
 
         // Change of the Corners Content //
         trContent.style.transform = trHidden;
-        //brContent.style.transform = brHidden;
+        brContent.style.transform = brHidden;
         blContent.style.transform = blHidden;
         tlContent.style.transform = tlActive;
     }
@@ -291,7 +291,7 @@ trBtn.onclick = function () {
     } else {
         tlBtn.innerHTML = "About";
         blBtn.innerHTML = "Books";
-       // brBtn.innerHTML = "Blog";
+        brBtn.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "top-right";
@@ -302,19 +302,19 @@ trBtn.onclick = function () {
 
         // Change Background Colors //
         trBtn.style.background = bgColorAlt;
-       // brBtn.style.background = bgColor;
+        brBtn.style.background = bgColor;
         blBtn.style.background = bgColor;
         tlBtn.style.background = bgColor;
 
         // Change Text Colors //
         trBtn.style.color = textColorAlt;
-       // brBtn.style.color = textColor;
+        brBtn.style.color = textColor;
         blBtn.style.color = textColor;
         tlBtn.style.color = textColor;
 
         // Change of the Corners Content //
         trContent.style.transform = trActive;
-        //brContent.style.transform = brHidden;
+        brContent.style.transform = brHidden;
         blContent.style.transform = blHidden;
         tlContent.style.transform = tlHidden;
     }
@@ -327,7 +327,7 @@ blBtn.onclick = function () {
     } else {
         tlBtn.innerHTML = "About";
         trBtn.innerHTML = "Merch";
-       // brBtn.innerHTML = "Blog";
+        brBtn.innerHTML = "Blog";
 
         // Set active corner //
         activeCorner = "bottom-left";
@@ -338,56 +338,56 @@ blBtn.onclick = function () {
 
         // Change Background Colors //
         trBtn.style.background = bgColor;
-       // brBtn.style.background = bgColor;
+        brBtn.style.background = bgColor;
         blBtn.style.background = bgColorAlt;
         tlBtn.style.background = bgColor;
 
         // Change Text Colors //
         trBtn.style.color = textColor;
-        //brBtn.style.color = textColor;
+        brBtn.style.color = textColor;
         blBtn.style.color = textColorAlt;
         tlBtn.style.color = textColor;
 
         // Change position of the Corners Content //
         trContent.style.transform = trHidden;
-       // brContent.style.transform = brHidden;
+        brContent.style.transform = brHidden;
         blContent.style.transform = blActive;
         tlContent.style.transform = tlHidden;
     }
 };
 
 // bottom right btn blog//
-//brBtn.onclick = function () {
-//    if (activeCorner === "bottom-right") {
-//        playClosingAnimation("reverse-animate-bottom-right");
-//    } else {
-//        tlBtn.innerHTML = "About";
-//        trBtn.innerHTML = "Merch";
-//        blBtn.innerHTML = "Books";
+brBtn.onclick = function () {
+    if (activeCorner === "bottom-right") {
+        playClosingAnimation("reverse-animate-bottom-right");
+    } else {
+        tlBtn.innerHTML = "About";
+        trBtn.innerHTML = "Merch";
+        blBtn.innerHTML = "Books";
 
         // Set active corner //
- //       activeCorner = "bottom-right";
- //       brBtn.innerHTML = "Blog<br/>&darr;";
+       activeCorner = "bottom-right";
+       brBtn.innerHTML = "Blog<br/>&darr;";
 
- //       handleWindowResize();
- //       playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
+       handleWindowResize();
+       playAnimation("animate-bottom-right", "reverse-animate-bottom-right");
 
         // Change Background Colors //
-//        trBtn.style.background = bgColor;
-//        brBtn.style.background = bgColorAlt;
-//        blBtn.style.background = bgColor;
-//        tlBtn.style.background = bgColor;
+       trBtn.style.background = bgColor;
+       brBtn.style.background = bgColorAlt;
+       blBtn.style.background = bgColor;
+       tlBtn.style.background = bgColor;
 
         // Change Text Colors //
-//        trBtn.style.color = textColor;
-//        brBtn.style.color = textColorAlt;
-//        blBtn.style.color = textColor;
-//        tlBtn.style.color = textColor;
+        trBtn.style.color = textColor;
+        brBtn.style.color = textColorAlt;
+        blBtn.style.color = textColor;
+        tlBtn.style.color = textColor;
 
         // Change of the Corners Content //
-//        trContent.style.transform = trHidden;
-//        brContent.style.transform = brActive;
-//        blContent.style.transform = blHidden;
-//        tlContent.style.transform = tlHidden;
-//    }
-//};
+        trContent.style.transform = trHidden;
+        brContent.style.transform = brActive;
+        blContent.style.transform = blHidden;
+        tlContent.style.transform = tlHidden;
+    }
+};
