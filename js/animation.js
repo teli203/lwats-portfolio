@@ -389,5 +389,5 @@ blBtn.onclick = function () {
 //        brContent.style.transform = brActive;
 //        blContent.style.transform = blHidden;
 //        tlContent.style.transform = tlHidden;
-    }
-};
+//    }
+//};
