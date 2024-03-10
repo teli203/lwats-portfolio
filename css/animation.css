@@ -17,7 +17,7 @@
 @keyframes hover {
     0% {
         /* write 1st code direction @ 0% */
-        transform: var(--tl-1);
+        transform: translateY(0);
     }
     50% {
         /* write 2nd code direction @ 50% */
@@ -25,7 +25,7 @@
     }
     100% {
         /* write 3rd code direction @ 100% */
-        transform: var(--tl-1);
+        transform: translateY(0);
     }
 }
 
@@ -119,7 +119,7 @@
 }
 
 /* Animate Bottom Right */
-.animate-bottom-right {
+/*.animate-bottom-right {
     animation-name: bottom-right;
   }
   
@@ -143,9 +143,9 @@
     100% {
       background-image: var(--br-5);
     }
-  }
+  } */
     /* Reverse Order */
-  @keyframes reverse-bottom-right {
+ /* @keyframes reverse-bottom-right {
     0% {
       background-image: var(--br-5);
     }
@@ -161,7 +161,7 @@
     100% {
       background-image: var(--br-1);
     }
-  }
+  } */
   /* Animate Bottom Left */
   .animate-bottom-left {
     animation-name: bottom-left;
