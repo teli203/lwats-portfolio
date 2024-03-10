@@ -12,7 +12,7 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-h1, h2, h3, h5, p{
+h1, h2, h3, h5, p {
 /* Removing all of the margin aka space outside the element 4 above h1-h5 */
     margin: 0; 
 }

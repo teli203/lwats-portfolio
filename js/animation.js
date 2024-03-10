@@ -35,7 +35,7 @@ let trHidden = "translateX(100vw) translateY(-100vh)";
 let blActive = "translate(10vw) translateY(7)"; 
 let blHidden = "translateX(-100vw) translateY(100vh)";
 
-let brActive = "translate(-5vw) translateY(0)"; 
+//let brActive = "translate(-5vw) translateY(0)"; 
 //let brHidden = "translateX(100vw) translateY(100vh)";//
 
 // Define Corners that are Open //
@@ -59,9 +59,9 @@ function handleWindowResize(){
                 tlContent.style.justifyContent = "center";
                 tlContent.style.background = "var(--bg-transparent)";
                 tlContent.style.zIndex = "200";
-                tlBtn.style.zindex = "300";
-                trBtn.style.zindex = "100";
-                blBtn.style.zindex = "100";
+                tlBtn.style.zIndex = "300";
+                trBtn.style.zIndex = "100";
+                blBtn.style.zIndex = "100";
                // brBtn.style.zindex = "100";
             } else {
                 tlActive = "translateX(5vw) translateY(0)";
@@ -211,7 +211,7 @@ function playClosingAnimation(reverseAnimation) {
     tlBtn.innerHTML = "About"
     trBtn.innerHTML = "Merch"
     blBtn.innerHTML = "Book"
-    brBtn.innerHTML = "Blog"
+    //brBtn.innerHTML = "Blog"
 
    switch (activeCorner) {
     case "top-left":
@@ -266,13 +266,13 @@ tlBtn.onclick = function () {
 
         // Change Background Colors //
         trBtn.style.background = bgColor;
-        brBtn.style.background = bgColor;
+        //brBtn.style.background = bgColor;
         blBtn.style.background = bgColor;
         tlBtn.style.background = bgColorAlt;
 
         // Change Text Colors //
         trBtn.style.color = textColor;
-        brBtn.style.color = textColor;
+        //brBtn.style.color = textColor;
         blBtn.style.color = textColor;
         tlBtn.style.color = textColorAlt;
 
@@ -344,7 +344,7 @@ blBtn.onclick = function () {
 
         // Change Text Colors //
         trBtn.style.color = textColor;
-        brBtn.style.color = textColor;
+        //brBtn.style.color = textColor;
         blBtn.style.color = textColorAlt;
         tlBtn.style.color = textColor;
 
