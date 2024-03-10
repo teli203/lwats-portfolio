@@ -1,6 +1,12 @@
 /* General Animation Settings */
-.animate-top-left, .reverse-animate-top-left 
-.animate-top-right, .reverse-animate-top-right {
+.animate-top-left,
+.reverse-animate-top-left,
+.animate-top-right,
+.reverse-animate-top-right,
+.animate-bottom-left,
+.reverse-animate-bottom-left,
+.animate-bottom-right,
+.reverse-animate-bottom-right {
     animation-fill-mode: forwards;
     animation-duration: 0.2s;
     animation-iteration-count: 1;
