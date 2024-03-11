@@ -161,7 +161,8 @@
     100% {
       background-image: var(--br-1);
     }
-  } */
+  } 
+  
   /* Animate Bottom Left */
   .animate-bottom-left {
     animation-name: bottom-left;
