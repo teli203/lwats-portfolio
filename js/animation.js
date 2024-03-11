@@ -259,7 +259,7 @@ tlBtn.onclick = function () {
 
         // Set active corner //
         activeCorner = "top-left";
-        tlBtn.innerHTML = "&uarr;<br />About";
+        tlBtn.innerHTML = "&uarr;<br/>About";
 
         handleWindowResize();
         playAnimation("animate-top-left", "reverse-animate-top-left");
